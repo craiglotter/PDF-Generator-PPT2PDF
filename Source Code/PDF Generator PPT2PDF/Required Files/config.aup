@@ -1,0 +1,3 @@
+APPLICATION_NAME=PDF Generator PPT2PDF
+EXECUTABLE=PDF Generator PPT2PDF.exe
+MANIFEST=http://www.commerce.uct.ac.za/Services/CodeUnit/AutoUpdate/PDF Generator PPT2PDF/manifest.xml

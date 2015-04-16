@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT type="Advanced Installer" version="1.9" modules="professional" RootPath=".">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="ProductName" Value="PDF Generator PPT2PDF"/>
+    <ROW Property="ALLUSERS" Value="2"/>
+    <ROW Property="BannerBitmap" Value="installer_background.jpg"/>
+    <ROW Property="ProductVersion" Value="1.0.0"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{F3870D82-450B-45B4-946B-27BE95A0982D}"/>
+    <ROW Property="ProductCode" Value="{DE2FAF16-D2FA-46E1-A027-B826232FA808}"/>
+    <ROW Property="ARPPRODUCTICON" Value="controlPanelIcon.exe"/>
+    <ROW Property="DialogBitmap" Value="installer_background_dialog.jpg"/>
+    <ROW Property="Manufacturer" Value="CodeUnit"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="Inputs_DIR" Directory_Parent="TARGETDIR" DefaultDir="Inputs"/>
+    <ROW Directory="Installers_DIR" Directory_Parent="TARGETDIR" DefaultDir="Instal~1|Installers"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" Directory_Parent="" DefaultDir="SourceDir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AutoUpdate.exe" ComponentId="{593B2CB9-D9C6-4A99-82B1-577777F627E9}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="AutoUpdate.exe" FullKeyPath="TARGETDIR\AutoUpdate.exe"/>
+    <ROW Component="Inputs.txt" ComponentId="{FB7ECF4A-A525-4786-B4CC-9C8AC5EAB78A}" Directory_="Inputs_DIR" Attributes="0" Condition="" KeyPath="Inputs.txt" FullKeyPath="TARGETDIR\Inputs"/>
+    <ROW Component="Interop.ACRODISTXLib.dll" ComponentId="{718AC759-E529-4A02-BFA7-35BC3FBFA47F}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="Interop.ACRODISTXLib.dll" FullKeyPath="TARGETDIR\Interop.ACRODISTXLib.dll"/>
+    <ROW Component="PDF_Generator_PPT2PDF.exe" ComponentId="{42D76873-42D7-4997-AABC-1A9B0B81646B}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="PDF_Generator_PPT2PDF.exe" FullKeyPath="TARGETDIR\PDF Generator PPT2PDF.exe"/>
+    <ROW Component="SaveAsPDFandXPS.exe" ComponentId="{83D3BA09-8BEA-488D-81AD-0E77004A9E50}" Directory_="Installers_DIR" Attributes="0" Condition="" KeyPath="SaveAsPDFandXPS.exe" FullKeyPath="TARGETDIR\Installers\SaveAsPDFandXPS.exe"/>
+    <ROW Component="za.exe" ComponentId="{B21FEBA4-5168-4755-8E1C-CF40315CBF96}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="za.exe" FullKeyPath="TARGETDIR\7za.exe"/>
+    <ROW Component="Application_Loader.exe" ComponentId="{AE111D8B-7E9A-41B2-81F5-AC8E97507D9E}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="Application_Loader.exe" FullKeyPath="TARGETDIR\Application_Loader.exe"/>
+    <ROW Component="Microsoft.Office.Interop.PowerPoint.dll" ComponentId="{BEAE4D36-E522-4978-8A59-18E7EC42CB42}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="Microsoft.Office.Interop.PowerPoint.dll" FullKeyPath="TARGETDIR\Microsoft.Office.Interop.PowerPoint.dll"/>
+    <ROW Component="Microsoft.Vbe.Interop.dll" ComponentId="{E7EE260D-D163-41E6-996C-0D639AA4B82D}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="Microsoft.Vbe.Interop.dll" FullKeyPath="TARGETDIR\Microsoft.Vbe.Interop.dll"/>
+    <ROW Component="Office.dll" ComponentId="{1E2EB048-5C3D-4359-B9D5-7A4BF6BF7AA7}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="Office.dll" FullKeyPath="TARGETDIR\Office.dll"/>
+    <ROW Component="config.aup" ComponentId="{EADBCC8A-64DB-4B3B-BFFA-5F39BD787989}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="config.aup" FullKeyPath="TARGETDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Feature_Parent="" Title="MainFeature" Description="Description" Display="2" Level="1" Directory_="TARGETDIR" Attributes="0" Components="za.exe Application_Loader.exe AutoUpdate.exe config.aup Inputs.txt SaveAsPDFandXPS.exe Interop.ACRODISTXLib.dll Microsoft.Office.Interop.PowerPoint.dll Microsoft.Vbe.Interop.dll Office.dll PDF_Generator_PPT2PDF.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="AutoUpdate.exe" Component_="AutoUpdate.exe" FileName="AutoUp~1.exe|AutoUpdate.exe" Version="" Language="" Attributes="" SourcePath="..\PDF Generator PPT2PDF\Required Files\AutoUpdate.exe" SelfReg="false"/>
+    <ROW File="Splash_Image.jpg" Component_="Inputs.txt" FileName="Splash~1.jpg|Splash_Image.jpg" Version="" Language="" Attributes="" SourcePath="..\PDF Generator PPT2PDF\Required Files\Inputs\Splash_Image.jpg" SelfReg="false"/>
+    <ROW File="Inputs.txt" Component_="Inputs.txt" FileName="Inputs.txt" Version="" Language="" Attributes="" SourcePath="..\PDF Generator PPT2PDF\Required Files\Inputs\Inputs.txt" SelfReg="false"/>
+    <ROW File="Interop.ACRODISTXLib.dll" Component_="Interop.ACRODISTXLib.dll" FileName="Intero~1.dll|Interop.ACRODISTXLib.dll" Version="" Language="" Attributes="" SourcePath="..\PDF Generator PPT2PDF\Required Files\Interop.ACRODISTXLib.dll" SelfReg="false"/>
+    <ROW File="Application_Loader.exe" Component_="Application_Loader.exe" FileName="Applic~1.exe|Application_Loader.exe" Version="" Language="" Attributes="" SourcePath="..\PDF Generator PPT2PDF\Required Files\Application_Loader.exe" SelfReg="false"/>
+    <ROW File="Description.txt" Component_="config.aup" FileName="Descri~1.txt|Description.txt" Version="" Language="" Attributes="" SourcePath="..\PDF Generator PPT2PDF\Required Files\Description.txt" SelfReg="false"/>
+    <ROW File="Microsoft.Office.Interop.PowerPoint.dll" Component_="Microsoft.Office.Interop.PowerPoint.dll" FileName="Micros~1.dll|Microsoft.Office.Interop.PowerPoint.dll" Version="" Language="" Attributes="" SourcePath="..\PDF Generator PPT2PDF\Required Files\Microsoft.Office.Interop.PowerPoint.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Vbe.Interop.dll" Component_="Microsoft.Vbe.Interop.dll" FileName="Micros~2.dll|Microsoft.Vbe.Interop.dll" Version="" Language="" Attributes="" SourcePath="..\PDF Generator PPT2PDF\Required Files\Microsoft.Vbe.Interop.dll" SelfReg="false"/>
+    <ROW File="Office.dll" Component_="Office.dll" FileName="Office.dll" Version="" Language="" Attributes="" SourcePath="..\PDF Generator PPT2PDF\Required Files\Office.dll" SelfReg="false"/>
+    <ROW File="config.aup" Component_="config.aup" FileName="config.aup" Version="" Language="" Attributes="" SourcePath="..\PDF Generator PPT2PDF\Required Files\config.aup" SelfReg="false"/>
+    <ROW File="config.sav" Component_="config.aup" FileName="config.sav" Version="" Language="" Attributes="" SourcePath="..\PDF Generator PPT2PDF\Required Files\config.sav" SelfReg="false"/>
+    <ROW File="Help.txt" Component_="config.aup" FileName="Help.txt" Version="" Language="" Attributes="" SourcePath="..\PDF Generator PPT2PDF\Required Files\Help.txt" SelfReg="false"/>
+    <ROW File="PDF_Generator_PPT2PDF.exe" Component_="PDF_Generator_PPT2PDF.exe" FileName="PDFGen~1.exe|PDF Generator PPT2PDF.exe" Version="" Language="" Attributes="" SourcePath="..\PDF Generator PPT2PDF\Required Files\PDF Generator PPT2PDF.exe" SelfReg="false"/>
+    <ROW File="SaveAsPDFandXPS.exe" Component_="SaveAsPDFandXPS.exe" FileName="SaveAs~1.exe|SaveAsPDFandXPS.exe" Version="" Language="" Attributes="" SourcePath="..\PDF Generator PPT2PDF\Required Files\Installers\SaveAsPDFandXPS.exe" SelfReg="false"/>
+    <ROW File="za.exe" Component_="za.exe" FileName="7za.exe" Version="" Language="" Attributes="" SourcePath="..\PDF Generator PPT2PDF\Required Files\7za.exe" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Source="" Target="A higher version of [ProductName] is installed."/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_TARGETDIR" Type="307" Source="TARGETDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="UpgradeCode" VersionMin="" VersionMax="ProductVersion" Language="" Attributes="1025" Remove=""/>
+    <ROW UpgradeCode="UpgradeCode" VersionMin="ProductVersion" VersionMax="" Language="" Attributes="2" Remove=""/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiMergeModsComponent">
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="PDF_Generator_PPT2PDF" Directory_="SHORTCUTDIR" Name="PDFGen~1|PDF Generator PPT2PDF" Component_="AutoUpdate.exe" Target="[TARGETDIR]Application_Loader.exe" Arguments="" Description="PDF Generator PPT2PDF" Hotkey="0" Icon_="controlPanelIcon.exe" IconIndex="0" ShowCmd="1" WkDir=""/>
+    <ROW Shortcut="PDF_Generator_PPT2PDF_AutoUpdate" Directory_="SHORTCUTDIR" Name="PDFGen~2|PDF Generator PPT2PDF AutoUpdate" Component_="AutoUpdate.exe" Target="[TARGETDIR]AutoUpdate.exe" Arguments="force" Description="AutoUpdate" Hotkey="0" Icon_="TARGETDIR_AutoUpdate.exe" IconIndex="0" ShowCmd="1" WkDir=""/>
+    <ROW Shortcut="PDF_Generator_PPT2PDF_Uninstall" Directory_="SHORTCUTDIR" Name="PDFGen~3|PDF Generator PPT2PDF Uninstall" Component_="AutoUpdate.exe" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Description="" Hotkey="0" Icon_="SystemFolder_msiexec.exe" IconIndex="0" ShowCmd="1" WkDir=""/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="SystemFolder_msiexec.exe" SourcePath="&lt;uninstall.ico&gt;" Index="0"/>
+    <ROW Name="TARGETDIR_AutoUpdate.exe" SourcePath="Images\AutoUpdate.ico" Index="0"/>
+    <ROW Name="controlPanelIcon.exe" SourcePath="Images\Application_Icon.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="installer_background.jpg" SourcePath="Images\installer_background.jpg"/>
+    <ROW Name="installer_background_dialog.jpg" SourcePath="Images\installer_background_dialog.jpg"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ATTRIBUTE name="Start" value="WelcomeDlg FolderDlg VerifyReadyDlg"/>
+    <ATTRIBUTE name="Progress" value="ProgressDlg"/>
+    <ATTRIBUTE name="End" value="ExitDialog"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiMediaComponent">
+    <ATTRIBUTE name="InstallationType" value="1"/>
+    <ATTRIBUTE name="MediaSize" value="0"/>
+    <ATTRIBUTE name="Compress" value="1"/>
+    <ATTRIBUTE name="Package" value="10"/>
+    <ATTRIBUTE name="PackageName" value="Release\PDF Generator PPT2PDF Installer"/>
+    <ATTRIBUTE name="IconPath" value="Images\Application_Icon.ico?0"/>
+  </COMPONENT>
+</DOCUMENT>
